@@ -1,0 +1,47 @@
+|adder3bit
+A[0] => FA:U0.A
+A[1] => FA:U1.A
+A[2] => FA:U2.A
+B[0] => FA:U0.B
+B[1] => FA:U1.B
+B[2] => FA:U2.B
+Cin => FA:U0.Cin
+S[0] <= FA:U0.S
+S[1] <= FA:U1.S
+S[2] <= FA:U2.S
+Cout <= FA:U2.Cout
+
+
+|adder3bit|FA:U0
+A => xor_ab.IN0
+A => and_ab.IN0
+B => xor_ab.IN1
+B => and_ab.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder3bit|FA:U1
+A => xor_ab.IN0
+A => and_ab.IN0
+B => xor_ab.IN1
+B => and_ab.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder3bit|FA:U2
+A => xor_ab.IN0
+A => and_ab.IN0
+B => xor_ab.IN1
+B => and_ab.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
